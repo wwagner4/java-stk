@@ -98,7 +98,7 @@ public class SlopeTryout {
 	}
 
 	static void runExecOneSlope(ScheduledExecutorService es) {
-		Param p = new TParam(0, new Visualizer(0, 100));
+		Param p = new TParam(0, new Visualizer(0, 100, 20));
 		ParamExec e = new ParamExec(p);
 		
 		e.runSlope(0.05, 100, (d, f, t) -> Slope.linear(d, f, t), es);
@@ -109,7 +109,7 @@ public class SlopeTryout {
 	}
 
 	static void runExecTwoSlope(ScheduledExecutorService es) {
-		Param p = new TParam(0, new Visualizer(0, 100));
+		Param p = new TParam(0, new Visualizer(0, 100, 30));
 		ParamExec e = new ParamExec(p);
 		
 		e.runSlope(0.01877, 100, (d, f, t) -> Slope.linear(d, f, t), es);
