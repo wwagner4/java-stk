@@ -91,8 +91,8 @@ public class SlopeTryout {
 	static void runExec() {
 		ScheduledExecutorService es  = Executors.newScheduledThreadPool(20);
 		
-//		runExecOneSlope(es);
-		runExecTwoSlope(es);
+		runExecOneSlope(es);
+//		runExecTwoSlope(es);
 		
 		es.shutdown();
 	}
@@ -194,7 +194,7 @@ class TParam implements Param {
 
 	@Override
 	public void setValue(double val) {
-		System.out.printf("-> TParam setValue %10.3f |%s\n", val, vis.visualize(val));
+		System.out.printf("-> TParam setValue %10.3f    %s\n", val, vis.visualize(val));
 		this.val = val;
 	}
 

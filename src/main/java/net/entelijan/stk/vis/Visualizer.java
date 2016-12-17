@@ -31,6 +31,10 @@ public class Visualizer {
 			for (int i = 0; i <= size; i++) {
 				if (i == j)
 					re[i] = '\u2022';
+				else if (i == 0)
+					re[i] = '|';
+				else if (i == size)
+					re[i] = '|';
 				else
 					re[i] = ' ';
 			}
